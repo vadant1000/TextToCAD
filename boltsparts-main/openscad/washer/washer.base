@@ -1,0 +1,22 @@
+---
+- filename: washer.scad
+  type: module
+  author: Johannes Reinhardt <jreinhardt@ist-dein-freund.de>
+  license: LGPL 2.1+ <http://www.gnu.org/licenses/lgpl-2.1>
+  modules:
+    - name: washer1
+      arguments: [d1, d2, s]
+      classids: [plainwasher1, plainwasher2, plainwasherforcheesehead, heavydutyplainwasher]
+      connectors:
+        name: washerConn
+        arguments: [d2,s,location]
+        locations: [top,bottom,outer]
+    - name: washer2
+      arguments: [d1, d2, s]
+      classids: [plainwasherchamfered]
+      connectors:
+        name: washerConn
+        arguments: [d2,s,location]
+        locations: [top,bottom,outer]
+...
+

@@ -1,0 +1,13 @@
+{% extends "docs.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 doc-main">
+    <div class="doc-page">
+      {{ content | safe }}
+      <h2>{% trans %}Comments{% endtrans %}</h2>
+      <div id="comments"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

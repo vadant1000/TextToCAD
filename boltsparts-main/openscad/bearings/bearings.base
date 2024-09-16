@@ -1,0 +1,13 @@
+---
+- filename: bearings.scad
+  author: Johannes Reinhardt <jreinhardt@ist-dein-freund.de>
+  license: LGPL 2.1+ <http://www.gnu.org/licenses/lgpl-2.1>
+  type: module
+  modules:
+    - name: singlerowradialbearing
+      arguments: [d1,d2,B,type]
+      classids: [singlerowradialbearing, singlerowradialbearingimperial]
+    - name: axialthrustbearing
+      arguments: [d_w,D_w,d_g,D_g,T]
+      classids: [axialthrustbearing]
+...

@@ -1,0 +1,9 @@
+*~
+*.swp
+*.pyc
+doc/*.pdf
+output/**/*
+bolttools/.coverage
+.sass-cache
+backends/website/static/.webassets-cache
+venv

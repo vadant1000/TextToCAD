@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block titlebar %}
+  <div class="page-title-bar">
+    <div class="container">
+      <h2>{% trans %}Blog Archive{% endtrans %}</h2>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div id="blog">
+  <div id="blog-content">
+    <table class="table">
+      {% for post in posts %}
+      <tr><td>
+        <a href="{{ url_for('blog.post',**post.url_values ) }}">{{ post.title }}</a>
+      </td><td>
+        <span class="date">{{ post.date | datetimeformat }}</span>
+      </td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
